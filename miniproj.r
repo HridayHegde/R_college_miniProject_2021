@@ -10,3 +10,5 @@ rdmTweets
 df <- twListToDF(rdmTweets)
 system.time(df$created <- as.Date(df$created))
 write.csv(df,"TweetMining.csv")
+plot(df$created,df$retweetCount,type="l")
+plot(df$created,df$favoriteCount,type="l")
